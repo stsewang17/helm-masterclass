@@ -38,4 +38,5 @@ File Glob as Config: {{ (.Files.Glob "config-files/*").AsConfig }}
 File Glob as Secret: {{ (.Files.Glob "config-files/*").AsSecrets }}
 File Lines1: {{ .Files.Lines "myconfig1.toml" }}
 File Lines2: {{ .Files.Lines "config-files/myconfig2.toml" }}
-File Glob: {{ .Files.Glob "config-files/*" }}
+File GlobConfig: {{ .Files.Glob "config-files/*".AsConfig}}
+File Glob: {{ .Files.Glob "config-files/*"}}
